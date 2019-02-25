@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator Sederhana</title>
+</head>
+<body>
+	<label>
+		<input type="text" id="angka1" placeholder="Masukan Angka">
+	</label>
+	<br>
+	<br>
+	<label>
+		<input type="text" id="angka2" placeholder="Masukan Angka">
+	</label>
+	<br>
+	<br>
+	<button id="tambah"> + </button>
+	<button id="kurang"> - </button>
+	<button id="kali"> * </button>
+	<button id="bagi"> / </button>
+
+	<p> Hasil = <span id="span">...</span></p>
+	<h1></h1>
+</body>
+<script type="text/javascript">
+	function tambah() {
+		var angka1 = Number(document.getElementById('angka1').value);
+			angka2 = Number(document.getElementById('angka2').value);
+			document.getElementById('span').textContent = angka1 + angka2;
+	}
+
+	function kurang() {
+		var angka1 = Number(document.getElementById('angka1').value);
+			angka2 = Number(document.getElementById('angka2').value);
+			document.getElementById('span').textContent = angka1 - angka2;
+	}
+
+	function kali() {
+		var angka1 = Number(document.getElementById('angka1').value);
+			angka2 = Number(document.getElementById('angka2').value);
+			document.getElementById('span').textContent = angka1 * angka2;
+	}
+
+	function bagi() {
+		var angka1 = Number(document.getElementById('angka1').value);
+			angka2 = Number(document.getElementById('angka2').value);
+			document.getElementById('span').textContent = angka1 / angka2;
+	}
+		document.getElementById('tambah').onclick = tambah;
+		document.getElementById('kurang').onclick = kurang;
+		document.getElementById('kali').onclick = kali;
+		document.getElementById('bagi').onclick = bagi;
+</script>
+</html>
