@@ -1,54 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Calculator Sederhana</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Armata" rel="stylesheet">
+	<title>Kalkulator Sederhana</title>
 </head>
 <body>
-	<label>
-		<input type="text" id="angka1" placeholder="Masukan Angka">
-	</label>
-	<br>
-	<br>
-	<label>
-		<input type="text" id="angka2" placeholder="Masukan Angka">
-	</label>
-	<br>
-	<br>
-	<button id="tambah"> + </button>
-	<button id="kurang"> - </button>
-	<button id="kali"> * </button>
-	<button id="bagi"> / </button>
-
-	<p> Hasil = <span id="span">...</span></p>
-	<h1></h1>
+	<div id="container">
+		<div id="calculator">
+			<div id="result">
+				<div id="history">
+					<p id="history-value"></p>
+				</div>
+					<div id="output-value">
+						
+					</div>
+			</div>
+				<div id="keyboard">
+					<button class="operator" id="clear">C</button>
+					<button class="operator" id="backspace">CE</button>
+					<button class="operator" id="%">%</button>
+					<button class="operator" id="/">&#247;</button>
+					<button class="number" id="7">7</button>
+					<button class="number" id="8">8</button>
+					<button class="number" id="9">9</button>
+					<button class="operator" id="*">&times;</button>
+					<button class="number" id="4">4</button>
+					<button class="number" id="5">5</button>
+					<button class="number" id="6">6</button>
+					<button class="operator" id="-">-</button>
+					<button class="number" id="1">1</button>
+					<button class="number" id="2">2</button>
+					<button class="number" id="3">3</button>
+					<button class="operator" id="+">+</button>
+					<button class="empty" id="empty"></button>
+					<button class="number" id="0">0</button>
+					<button class="empty" id="empty"></button>
+					<button class="operator" id="=">=</button>
+					
+				</div>
+		</div>
+	</div>
+<script type="text/javascript" src="script.js"></script>
 </body>
-<script type="text/javascript">
-	function tambah() {
-		var angka1 = Number(document.getElementById('angka1').value);
-			angka2 = Number(document.getElementById('angka2').value);
-			document.getElementById('span').textContent = angka1 + angka2;
-	}
-
-	function kurang() {
-		var angka1 = Number(document.getElementById('angka1').value);
-			angka2 = Number(document.getElementById('angka2').value);
-			document.getElementById('span').textContent = angka1 - angka2;
-	}
-
-	function kali() {
-		var angka1 = Number(document.getElementById('angka1').value);
-			angka2 = Number(document.getElementById('angka2').value);
-			document.getElementById('span').textContent = angka1 * angka2;
-	}
-
-	function bagi() {
-		var angka1 = Number(document.getElementById('angka1').value);
-			angka2 = Number(document.getElementById('angka2').value);
-			document.getElementById('span').textContent = angka1 / angka2;
-	}
-		document.getElementById('tambah').onclick = tambah;
-		document.getElementById('kurang').onclick = kurang;
-		document.getElementById('kali').onclick = kali;
-		document.getElementById('bagi').onclick = bagi;
-</script>
 </html>
